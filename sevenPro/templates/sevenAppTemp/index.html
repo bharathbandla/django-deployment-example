@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "sevenAppTemp/basic.html" %}
+{% block body_block %}
+
+<div class="jumbotron">
+    {% if user.is_authenticated %}
+        <h1>Do you Know Today our Festival is Going on</h1>
+        <h2> check in your cart for more requirments</h2>
+    {% else %}
+        <h1>Hello All</h1>
+        <h2>..... This is Our Site Which Contains All Your Requirments ....</h2>
+    {% endif %}
+
+</div>
+
+{% endblock %}

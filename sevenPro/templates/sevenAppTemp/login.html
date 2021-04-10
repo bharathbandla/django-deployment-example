@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends 'sevenAppTemp/basic.html' %}
+{% block body_block %}
+
+<div class="jumbotron">
+    <h1>LogIn Here!</h1>
+    <form action="{% url 'sevenAppu:cus_login' %}" method="POST">
+        {% csrf_token %}
+        <label for="bro_name">Username:</label>
+        <input type="text" name="bro_name" placeholder="Enter Username..">
+        <label for="bro_password">Password:</label>
+        <input type="password" name="bro_password">
+
+        <input type="submit" name="LogIn">
+    </form>
+
+</div>
+
+{% endblock %}
